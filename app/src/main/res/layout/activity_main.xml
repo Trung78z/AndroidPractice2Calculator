@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="464dp"
+        android:background="@drawable/border_shape"
         android:ellipsize="end"
         android:gravity="end"
         android:maxLines="1"
@@ -31,12 +32,11 @@
         android:layout_height="282dp"
         android:layout_margin="8dp"
         android:columnCount="4"
-        android:rowCount="4"
+        android:rowCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnClear"
@@ -44,7 +44,7 @@
             android:text="AC"
             android:textColor="#FFF"
             app:backgroundTint="#E53935"
-            app:cornerRadius="16dp" />
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDelete"
@@ -52,15 +52,7 @@
             android:text="⌫"
             android:textColor="#FFF"
             app:backgroundTint="#FF9800"
-            app:cornerRadius="16dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPercent"
-            style="@style/CalcButton"
-            android:text="%"
-            android:textColor="#FFF"
-            app:backgroundTint="#03A9F4"
-            app:cornerRadius="16dp" />
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDiv"
@@ -68,8 +60,15 @@
             android:text="/"
             android:textColor="#FFF"
             app:backgroundTint="#3F51B5"
-            app:cornerRadius="16dp" />
+            app:cornerRadius="8dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMul"
+            style="@style/CalcButton"
+            android:text="*"
+            android:textColor="#FFF"
+            app:backgroundTint="#3F51B5"
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number7"
@@ -87,13 +86,12 @@
             android:text="9" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMul"
+            android:id="@+id/btnSub"
             style="@style/CalcButton"
-            android:text="*"
+            android:text="-"
             android:textColor="#FFF"
             app:backgroundTint="#3F51B5"
-            app:cornerRadius="16dp" />
-
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number4"
@@ -111,13 +109,12 @@
             android:text="6" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSub"
+            android:id="@+id/btnAdd"
             style="@style/CalcButton"
-            android:text="-"
+            android:text="+"
             android:textColor="#FFF"
             app:backgroundTint="#3F51B5"
-            app:cornerRadius="16dp" />
-
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number1"
@@ -135,13 +132,15 @@
             android:text="3" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAdd"
+            android:id="@+id/btn_equal"
             style="@style/CalcButton"
-            android:text="+"
+            android:layout_height="103dp"
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="1"
+            android:text="="
             android:textColor="#FFF"
-            app:backgroundTint="#3F51B5"
-            app:cornerRadius="16dp" />
-
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="8dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number0"
@@ -155,12 +154,12 @@
             android:text="." />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_equal"
+            android:id="@+id/btnPercent"
             style="@style/CalcButton"
-            android:text="="
+            android:text="%"
             android:textColor="#FFF"
-            app:backgroundTint="#4CAF50"
-            app:cornerRadius="16dp" />
+            app:backgroundTint="#03A9F4"
+            app:cornerRadius="8dp" />
 
     </GridLayout>
 
@@ -184,7 +183,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/txtHistory"
                 android:layout_width="match_parent"
@@ -192,7 +190,6 @@
                 android:padding="8dp"
                 android:textColor="@color/blue"
                 android:textSize="16sp" />
-
         </LinearLayout>
     </ScrollView>
 
